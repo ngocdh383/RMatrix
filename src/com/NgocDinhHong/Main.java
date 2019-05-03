@@ -6,20 +6,23 @@ public class Main {
 
     public static void main(String[] args) {
 
-//        Matrix matrix = new Matrix(new Double[][]{
-//                {1.0,1.0,1.0,4.0,1.0},
-//                {1.0,1.0,1.0,1.0,1.0},
-//                {1.0,1.0,1.0,1.0,1.0},
-//                {1.0,1.0,1.0,1.0,1.0},
-//                {1.0,1.0,1.0,1.0,1.0}
-//        });
+        Matrix matrix = new Matrix(new Double[][]{
+                {1.0, 1.0, 1.0, 1.0, 1.0},
+                {2.0, 1.0, 1.0, 1.0, 1.0},
+                {3.0, 1.0, 1.0, 1.0, 1.0},
+                {4.0, 1.0, 1.0, 1.0, 1.0},
+                {5.0, 1.0, 1.0, 1.0, 1.0}
+        });
 
-        Matrix matrix = new Matrix(new Double[5][5]);
-
-        matrix1.addValue(0,0,0);
-
-        matrix1.print();
-
-        System.out.println("end");
+        Matrix matrix2 = new Matrix(new Double[][]{
+                {1.0, 1.0, 1.0, 1.0, 1.0},
+                {2.0, 1.0, 1.0, 1.0, 1.0},
+                {3.0, 1.0, 1.0, 1.0, 1.0},
+                {4.0, 1.0, 1.0, 1.0, 1.0},
+                {5.0, 1.0, 1.0, 1.0, 1.0}
+        });
+        matrix.mult(matrix2);
+        matrix.show();
+        System.out.println("========================== END ==========================");
     }
 }
