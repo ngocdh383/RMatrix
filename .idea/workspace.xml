@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02437be4-1d40-499d-bb87-7445e9c846c9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/NgocDinhHong/RMatrix/RMatixException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/NgocDinhHong/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/NgocDinhHong/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/NgocDinhHong/RMatrix/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/NgocDinhHong/RMatrix/Matrix.java" afterDir="false" />
     </list>
@@ -33,20 +31,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/NgocDinhHong/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="22" lean-forward="true" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+            <state relative-caret-position="295">
+              <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/NgocDinhHong/RMatrix/Matrix.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="95" column="45" selection-start-line="95" selection-start-column="45" selection-end-line="95" selection-end-column="45" />
+            <state relative-caret-position="428">
+              <caret line="177" column="5" lean-forward="true" selection-start-line="177" selection-start-column="5" selection-end-line="177" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#Matrix#0;class#Matrix#0" />
@@ -85,8 +83,8 @@
         <option value="$PROJECT_DIR$/src/com/NgocDinhHong/RMatrix/RMatixException.java" />
         <option value="$PROJECT_DIR$/src/com/NgocDinhHong/RMatrix/VectorException.java" />
         <option value="$PROJECT_DIR$/src/com/NgocDinhHong/RMatrix/Vector.java" />
-        <option value="$PROJECT_DIR$/src/com/NgocDinhHong/Main.java" />
         <option value="$PROJECT_DIR$/src/com/NgocDinhHong/RMatrix/Matrix.java" />
+        <option value="$PROJECT_DIR$/src/com/NgocDinhHong/Main.java" />
       </list>
     </option>
   </component>
@@ -193,18 +191,19 @@
       <updated>1556554034114</updated>
       <workItem from="1556554035453" duration="991000" />
       <workItem from="1556799457350" duration="13539000" />
+      <workItem from="1556883237855" duration="1824000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14530000" />
+    <option name="totallyTimeSpent" value="16354000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="800" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="801" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49858758" weight="0.2532189" />
-      <window_info id="Structure" order="1" sideWeight="0.50141245" side_tool="true" visible="true" weight="0.2532189" />
+      <window_info id="Structure" order="1" sideWeight="0.50141245" side_tool="true" visible="true" weight="0.25679544" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -212,8 +211,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.8418079" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3983051" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4428773" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3977433" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -240,13 +239,29 @@
   <component name="XDebuggerManager">
     <watches-manager>
       <configuration name="Application">
-        <watch expression="mtx1.getValue(i, j)" language="JAVA" />
-        <watch expression="mtx2.getValue(i, j)" language="JAVA" />
+        <watch expression="result[i][j]" language="JAVA" />
+        <watch expression="this.data[i][x]" language="JAVA" />
+        <watch expression="mtx.data[x][j]" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>mtx.data[x][j]</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>this.data[i][x]</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>result[i][j]</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>mtx2.getValue(i, j)</expression-string>
         <language-id>JAVA</language-id>
@@ -348,29 +363,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/NgocDinhHong/RMatrix/VectorException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-          <folding>
-            <element signature="e#120#121#0" expanded="true" />
-            <element signature="e#139#140#0" expanded="true" />
-            <element signature="e#172#173#0" expanded="true" />
-            <element signature="e#202#203#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/NgocDinhHong/RMatrix/Vector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#788#789#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/NgocDinhHong/RMatrix/VectorException.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/NgocDinhHong/RMatrix/Vector.java" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/src.zip!/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
@@ -389,17 +383,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/NgocDinhHong/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="22" lean-forward="true" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/NgocDinhHong/RMatrix/Matrix.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="95" column="45" selection-start-line="95" selection-start-column="45" selection-end-line="95" selection-end-column="45" />
+        <state relative-caret-position="428">
+          <caret line="177" column="5" lean-forward="true" selection-start-line="177" selection-start-column="5" selection-end-line="177" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Matrix#0;class#Matrix#0" />
@@ -415,6 +402,13 @@
             <element signature="method#mult#2;class#Matrix#0" />
             <element signature="method#checkMatrix#0;class#Matrix#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/NgocDinhHong/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
         </state>
       </provider>
     </entry>

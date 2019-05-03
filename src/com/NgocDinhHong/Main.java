@@ -21,8 +21,7 @@ public class Main {
                 {4.0, 1.0, 1.0, 1.0, 1.0},
                 {5.0, 1.0, 1.0, 1.0, 1.0}
         });
-        matrix.mult(matrix2);
-        matrix.show();
+
         System.out.println("========================== END ==========================");
     }
 }

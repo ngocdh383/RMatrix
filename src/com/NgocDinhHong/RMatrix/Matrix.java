@@ -4,6 +4,7 @@ import com.sun.glass.ui.Size;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import java.util.zip.DeflaterOutputStream;
 
 public class Matrix {
     private Double[][] data = null;
@@ -91,9 +92,16 @@ public class Matrix {
 
         Double[][] result = new Double[s1.height][s2.width];
 
+        for (int i = 0; i < result.length; i++) {
+            for (int j = 0; j < result[i].length; j++) {
+                result[i][j] = 0.0;
+                for (int x = 0; x < s1.width; x++) {
+                    result[i][j] += this.data[i][x] * mtx.data[x][j];
+                }
+            }
+        }
 
-        /**
-         * Làm tới đây hàm này chưa xong còn.*/
+        this.data = result;
 
         return this;
     }
@@ -144,6 +152,26 @@ public class Matrix {
         for (int i = 0; i < size.height; i++) {
             for (int j = 0; j < size.width; j++) {
                 result[i][j] = mtx.getValue(i, j) * num;
+            }
+        }
+        return new Matrix(result);
+    }
+
+    public static Matrix mult(Matrix mtx1, Matrix mtx2) {
+        Size s1 = mtx1.size();
+        Size s2 = mtx2.size();
+
+        if (s1.width != s2.height)
+            throw new RMatixException("It is only possible to multiply 2 matrices when and only if the number of columns of matrix A is equal to the number of lines of matrix B");
+
+        Double[][] result = new Double[s1.height][s2.width];
+
+        for (int i = 0; i < result.length; i++) {
+            for (int j = 0; j < result[i].length; j++) {
+                result[i][j] = 0.0;
+                for (int x = 0; x < s1.width; x++) {
+                    result[i][j] += mtx1.data[i][x] * mtx2.data[x][j];
+                }
             }
         }
         return new Matrix(result);
