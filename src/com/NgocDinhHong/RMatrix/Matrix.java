@@ -7,6 +7,7 @@ import java.text.NumberFormat;
 import java.util.zip.DeflaterOutputStream;
 
 public class Matrix {
+
     private Double[][] data = null;
 
     public Matrix(Double[][] data) {
@@ -30,10 +31,10 @@ public class Matrix {
     }
 
     public Size size() {
-        Size size = new Size();
-        size.height = this.data.length;
-        size.width = this.data[0].length;
-        return size;
+        Size s = new Size();
+        s.height = this.data.length;
+        s.width = this.data[0].length;
+        return s;
     }
 
     public Matrix T() {
@@ -106,6 +107,67 @@ public class Matrix {
         return this;
     }
 
+    public Matrix gauss() {
+        Size s = this.size();
+        int i = 0, j = 0;
+        while (j < s.width && i < s.height) {
+            int k = i;
+
+            while (this.data[k][j] == 0) {
+                if (k + 1 >= s.height) break;
+                k++;
+            }
+
+            if (this.data[k][j] != 0) {
+                if (k != i) {
+                    //System.out.println(String.format("d%d <-> d%d",k,i));
+                    this.swapRows(k, i);
+                }
+                // thuc hien cac buoc bien doi.
+
+                for (int z = i + 1; z < s.height; z++) {
+                    Double alpha = this.data[z][j] / this.data[i][j];
+                    //System.out.println(String.format("d%d - %fd%d", z,alpha,i));
+                    for (int v = 0; v < s.width; v++) {
+                        this.data[z][v] = this.data[z][v] - alpha * this.data[i][v];
+
+                    }
+                }
+
+                i++;
+
+                // System.out.println("_________________________________________________________________________");
+                // this.show();
+            }
+            j++;
+        }
+        return this;
+    }
+
+    public Matrix swapRows(int k, int i) {
+        Size s = this.size();
+        if (k < 0 || k > s.height - 1 || i < 0 || i > s.height - 1)
+            throw new IndexOutOfBoundsException("Invalid row index");
+
+        for (int j = 0; j < s.width; j++) {
+            Double temp = this.data[k][j];
+            this.data[k][j] = this.data[i][j];
+            this.data[i][j] = temp;
+        }
+        return this;
+    }
+
+    private void checkMatrix(Double[][] data) {
+        // Check null data;
+        if (data == null) throw new NullPointerException("Null matrix");
+
+        // Check kind of matrix is m x n
+        int temp = data[0].length;
+        for (Double[] row : data) {
+            if (row.length != temp) throw new RMatixException("Only support matrix type m x n");
+        }
+    }
+
     public static boolean compare(Matrix mtx1, Matrix mtx2) {
         Size s1 = mtx1.size();
         Size s2 = mtx2.size();
@@ -175,17 +237,6 @@ public class Matrix {
             }
         }
         return new Matrix(result);
-    }
-
-    private void checkMatrix(Double[][] data) {
-        // Check null data;
-        if (data == null) throw new NullPointerException("Null matrix");
-
-        // Check kind of matrix is m x n
-        int temp = data[0].length;
-        for (Double[] row : data) {
-            if (row.length != temp) throw new RMatixException("Only support matrix type m x n");
-        }
     }
 
 
